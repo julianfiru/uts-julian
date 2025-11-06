@@ -8,25 +8,14 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <!-- Navigation Button -->
-    <div class="container-fluid">
-        <div class="row mb-3">
-            <div class="col-12 text-end">
-                <a href="{{ url('tugas2') }}" class="btn btn-nav">
-                    Go to Tugas 2 →
-                </a>
-            </div>
-        </div>
-    </div>
-
     <div class="container-fluid">
         <!-- First Frame -->
         <div class="row">
             <div class="col-12">
                 <div class="frame frame-first">
                     <h3>Name and Address</h3>
-                    <p><strong>Nama:</strong> Muhamad Julian Firdaus</p>
-                    <p><strong>Alamat:</strong> Kab. Tangerang</p>
+                    <p><strong>Nama:</strong>Julian</p>
+                    <p><strong>Alamat:</strong>Tangerang</p>
                 </div>
             </div>
         </div>
@@ -91,6 +80,18 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="nav-container">
+        <a href="{{ url('tugas1') }}" class="btn-nav" style="opacity: 0.6; pointer-events: none;">
+            📄 Tugas 1 (Current)
+        </a>
+        <a href="{{ url('tugas2') }}" class="btn-nav">
+            📝 Tugas 2
+        </a>
+        <a href="{{ url('tugas2ori') }}" class="btn-nav">
+            📋 Tugas 2 Original
+        </a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

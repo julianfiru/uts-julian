@@ -19,15 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let flowerCount = 0;
     let currentAction = '';
     
-    // Setup popup overlay styles
-    popupOverlay.style.display = 'none';
-    
     // Event: Change Text Color Button
     changeTextBtn.addEventListener('click', function() {
         currentAction = 'text';
         popupTitle.textContent = 'Change Text Color';
         popupText.textContent = 'Choose your text color:';
-        colorPicker.value = '#000000'; // Reset to black
+        colorPicker.value = '#000000';
         popupOverlay.style.display = 'block';
     });
     
@@ -36,41 +33,25 @@ document.addEventListener('DOMContentLoaded', function() {
         currentAction = 'background';
         popupTitle.textContent = 'Change Background Color';
         popupText.textContent = 'Choose your background color:';
-        colorPicker.value = '#ffffff'; // Reset to white
+        colorPicker.value = '#ffffff';
         popupOverlay.style.display = 'block';
     });
     
-    // Event: Apply Color Button - SUDAH DIPERBAIKI
+    // Event: Apply Color Button
     applyColorBtn.addEventListener('click', function() {
         const selectedColor = colorPicker.value;
         
-        if (currentAction === 'text') {
-            // Ganti warna text paragraph dan h1
+       if (currentAction === 'text') {
             text1.style.color = selectedColor;
             h1Title.style.color = selectedColor;
-            
-            // PERBAIKAN: Ganti warna semua card-title dan card-text
-            document.querySelectorAll('.card-title').forEach(function(element) {
-                element.style.color = selectedColor;
-            });
-            
-            document.querySelectorAll('.card-text').forEach(function(element) {
-                element.style.color = selectedColor;
-            });
-            
-            // Ganti warna paragraf di basket
-            basketStat.style.color = selectedColor;
-            
+            basketStat.style.color = selectedColor; // 🟢 Tambahkan baris ini
             console.log('Text color changed to:', selectedColor);
-        } else if (currentAction === 'background') {
-            // PERBAIKAN: Ganti warna background body dengan !important
-            body.style.setProperty('background', selectedColor, 'important');
-            body.style.setProperty('background-color', selectedColor, 'important');
-            
+        }
+        else if (currentAction === 'background') {
+            body.style.backgroundColor = selectedColor;
             console.log('Background color changed to:', selectedColor);
         }
         
-        // Tutup popup setelah apply
         popupOverlay.style.display = 'none';
     });
     
@@ -98,11 +79,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const flowerCopy = document.createElement('img');
         flowerCopy.src = originalImg.src;
         flowerCopy.alt = originalImg.alt;
+        flowerCopy.width = 100;
+        flowerCopy.height = 100;
         flowerCopy.style.cursor = 'pointer';
-        flowerCopy.className = 'basket-flower-img img-thumbnail';
-        flowerCopy.style.width = '100px';
-        flowerCopy.style.height = '100px';
-        flowerCopy.style.objectFit = 'cover';
+        flowerCopy.style.margin = '5px';
+        flowerCopy.style.border = '2px solid #333';
         
         flowerCopy.addEventListener('click', function() {
             removeFlowerFromBasket(flowerCopy);
