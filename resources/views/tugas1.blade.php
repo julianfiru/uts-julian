@@ -64,10 +64,13 @@
             <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0">
                 <div class="frame frame-fourth">
                     <h3>Scrolling message</h3>
-                    <div class="overflow-hidden">
-                        <p class="scrolling-text">🚀 Selamat datang di halaman profil saya! Saya adalah seorang developer yang passionate dalam menciptakan solusi teknologi inovatif. Mari berkolaborasi!</p>
+                    <div class="scroll-container">
+                        <p class="scrolling-text">
+                            🚀 Selamat datang di halaman profil saya! Saya adalah seorang developer yang passionate dalam menciptakan solusi teknologi inovatif. Mari berkolaborasi!
+                        </p>
                     </div>
                 </div>
+
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-0">
                 <div class="frame frame-fifth">
