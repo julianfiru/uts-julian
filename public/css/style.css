@@ -1,0 +1,499 @@
+/* ===========================
+   NAVIGATION BUTTON
+   =========================== */
+.btn-nav {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.5);
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    color: white;
+}
+
+/* ===========================
+   GENERAL STYLES
+   =========================== */
+body {
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container-fluid {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===========================
+   FRAME STYLES
+   =========================== */
+.frame {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    min-height: 100px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.frame-first {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.frame-first h3,
+.frame-first p,
+.frame-first strong {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.frame-second {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);
+}
+
+.frame-second h3,
+.frame-second h5,
+.frame-second ul,
+.frame-second li {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.frame-third {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+}
+
+.frame-third h3,
+.frame-third h5,
+.frame-third ul,
+.frame-third li {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.frame-third a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.frame-third a:hover {
+    color: #ffeb3b;
+    text-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+    transform: scale(1.05);
+}
+
+.frame-fourth {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: #1a5f3f;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 30px rgba(67, 233, 123, 0.4);
+}
+
+.frame-fourth h3,
+.frame-fourth h5 {
+    color: #1a5f3f;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+.frame-fifth {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: #7d1d3f;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 30px rgba(250, 112, 154, 0.4);
+}
+
+.frame-fifth h3,
+.frame-fifth h5 {
+    color: #7d1d3f;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+.frame-sixth {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #2c3e50;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 30px rgba(168, 237, 234, 0.4);
+}
+
+.frame-sixth h3,
+.frame-sixth h5 {
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+.frame h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.frame h5 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.frame p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.frame ul {
+    padding-left: 20px;
+}
+
+.frame ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* ===========================
+   SCROLLING TEXT ANIMATION
+   =========================== */
+.scrolling-text {
+    animation: scroll-left 12s linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+    font-weight: 600;
+    color: #1a5f3f;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes scroll-left {
+    0% { 
+        transform: translateX(100%); 
+    }
+    100% { 
+        transform: translateX(-100%); 
+    }
+}
+
+/* ===========================
+   BLINKING ANIMATION
+   =========================== */
+.blink {
+    animation: blink-animation 1.5s infinite;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@keyframes blink-animation {
+    0%, 50% { 
+        opacity: 1; 
+    }
+    51%, 100% { 
+        opacity: 0.2;  
+    }
+}
+
+.blink-red {
+    color: #c0392b;
+    text-shadow: 0 0 10px rgba(192, 57, 43, 0.5);
+}
+
+.blink-blue {
+    color: #2980b9;
+    text-shadow: 0 0 10px rgba(41, 128, 185, 0.5);
+}
+
+/* ===========================
+   PROFILE IMAGE
+   =========================== */
+.profile-image-wrapper {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 5px solid #fff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.profile-image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.profile-image-wrapper:hover {
+    transform: scale(1.15) rotate(-3deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    border-color: #ffeb3b;
+}
+
+.profile-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-icon {
+    font-size: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===========================
+   LINKS STYLING
+   =========================== */
+.frame a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.frame a:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Mobile devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    body {
+        padding: 10px;
+    }
+    
+    .frame {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .frame h3 {
+        font-size: 1.1rem;
+    }
+    
+    .frame h5 {
+        font-size: 0.95rem;
+    }
+    
+    .frame p, .frame ul li {
+        font-size: 0.9rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .profile-icon {
+        font-size: 50px;
+    }
+    
+    .scrolling-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body {
+        padding: 15px;
+    }
+    
+    .frame {
+        padding: 18px;
+    }
+    
+    .frame h3 {
+        font-size: 1.2rem;
+    }
+    
+    .profile-image-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .profile-icon {
+        font-size: 55px;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        padding: 18px;
+    }
+    
+    .frame {
+        min-height: 280px;
+    }
+    
+    .frame-second,
+    .frame-third {
+        min-height: 300px;
+    }
+    
+    .profile-image-wrapper {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .frame {
+        min-height: 320px;
+    }
+    
+    .frame-second,
+    .frame-third {
+        min-height: 350px;
+    }
+    
+    .frame-fourth,
+    .frame-fifth,
+    .frame-sixth {
+        min-height: 350px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container-fluid {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .frame {
+        padding: 25px;
+        min-height: 320px;
+    }
+    
+    .frame h3 {
+        font-size: 1.4rem;
+    }
+    
+    .frame-second,
+    .frame-third {
+        min-height: 380px;
+    }
+    
+    .frame-fourth,
+    .frame-fifth,
+    .frame-sixth {
+        min-height: 380px;
+    }
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    
+    .frame {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #333;
+    }
+    
+    .scrolling-text {
+        animation: none;
+    }
+    
+    .blink {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+    .scrolling-text,
+    .blink,
+    .frame,
+    .profile-image {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .frame {
+        border: 2px solid #000;
+    }
+    
+    .frame a {
+        text-decoration: underline;
+    }
+}
